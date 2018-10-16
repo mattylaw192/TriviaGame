@@ -1,0 +1,24 @@
+.answers {
+    margin: 0px 0px 20px 0px;
+}
+
+.nav {
+    background-color:#FB861F;
+    color:white;
+}
+
+.directions {
+    background-color:#F0F0F0;
+}
+
+.footer {
+    position:fixed;
+    text-align:right;
+    z-index:2;
+    float:right;
+    bottom:0px;
+    right:0px;
+    background-color:#FB861F;
+    color:white;
+
+}
