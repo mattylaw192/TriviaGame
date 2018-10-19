@@ -28,124 +28,23 @@
     </div>
 
     <div class="container">
-        <div class="startButton">
-            <button type="button" class="btn btn-success">Start Game</button>
+        <div class="startButton" id="start">
+            <button type="button" class="btn btn-success" id="start">Start Game</button>
+           
         </div>
-
-        <!-- Question 1 -->
-        <div class="row">
-            <div class="col-md-12">
-                <h3>1. Mama, just killed _________. (easy)</h3>
+        <div class="answers">
+            <div>
+                <h2>Correct Answers:</h2>
             </div>
         </div>
-        <div class="col-md-12 answers">
-            <form>
-                <input type="radio" name="answer" value="questionOne"> a squirrel <br>
-                <input type="radio" name="answer" value="questionOne"> a man <br>
-                <input type="radio" name="answer" value="questionOne"> a houseplant <br>
-                <input type="radio" name="answer" value="questionOne"> Hey now, you're an all star! <br>
-            </form>
-        </div>
 
-        <!--Question 2-->
-        <div class="row">
-            <div class="col-md-12">
-                <h3>2. There's vomit on his sweater already, _________. (easy)</h3>
-            </div>
-        </div>
-        <div class="col-md-12 answers">
-            <form>
-                <input type="radio" name="answer" value="questionTwo"> Nelson Bighetti <br>
-                <input type="radio" name="answer" value="questionTwo"> somebody once told me the world is gonna roll
-                me. I ain't the sharpest tool in the sheeeeeed <br>
-                <input type="radio" name="answer" value="questionTwo"> Call the Vetty. (The wife came up with this one)
-                <br>
-                <input type="radio" name="answer" value="questionTwo"> mom's spaghetti <br>
-            </form>
-        </div>
-
-        <!--Question 3-->
-        <div class="row">
-            <div class="col-md-12">
-                <h3>3. Two pints of booze, tell me are you _______ too? (medium)</h3>
-            </div>
-        </div>
-        <div class="col-md-12 answers">
-            <form>
-                <input type="radio" name="answer" value="questionThree">a badfish <br>
-                <input type="radio" name="answer" value="questionThree">a cuttlefish <br>
-                <input type="radio" name="answer" value="questionThree"> an all star <br>
-                <input type="radio" name="answer" value="questionThree"> a drinker <br>
-            </form>
-        </div>
-
-
-        <!--Question 4-->
-        <div class="row">
-            <div class="col-md-12">
-                <h3>4. Hello, I've waited here for you, ____________. (medium)</h3>
-            </div>
-        </div>
-        <div class="col-md-12 answers">
-            <form>
-                <input type="radio" name="answer" value="questionFour">for quite some time<br>
-                <input type="radio" name="answer" value="questionFour"> for too long <br>
-                <input type="radio" name="answer" value="questionFour"> Everlong <br>
-                <input type="radio" name="answer" value="questionFour"> for about 5 minutes <br>
-            </form>
-        </div>
-
-        <!--Question 5-->
-        <div class="row">
-            <div class="col-md-12">
-                <h3>5. I just want to break you down so badly, ____________. (Hard)</h3>
-            </div>
-        </div>
-        <div class="col-md-12 answers">
-            <form>
-                <input type="radio" name="answer" value="questionFive">I trip over everything you say<br>
-                <input type="radio" name="answer" value="questionFive"> I'm gonna make damn sure <br>
-                <input type="radio" name="answer" value="questionFive"> Well I've got a bad feeling about this <br>
-                <input type="radio" name="answer" value="questionFive"> don't let it go to your head <br>
-            </form>
-        </div>
-
-        <!--Question 6-->
-        <div class="row">
-            <div class="col-md-12">
-                <h3>6. what the hell is ADD, my friends say ________________.(Hard)</h3>
-            </div>
-        </div>
-        <div class="col-md-12 answers">
-            <form>
-                <input type="radio" name="answer" value="questionSix">what's the day again?<br>
-                <input type="radio" name="answer" value="questionSix">I should act my age, what's my age again? <br>
-                <input type="radio" name="answer" value="questionSix"> I should play more halo <br>
-                <input type="radio" name="answer" value="questionSix"> I should act my age, why would I do that? <br>
-            </form>
-        </div>
-
-        <!--Question 7-->
-        <div class="row">
-            <div class="col-md-12">
-                <h3>7. I hope this song starts a craze. (Very Hard)</h3>
-            </div>
-        </div>
-        <div class="col-md-12 answers">
-            <form>
-                <input type="radio" name="answer" value="questionSeven">The kind of song that you hear for days.<br>
-                <input type="radio" name="answer" value="questionSeven">The kind of song that makes people glad to be
-                where they are. <br>
-                <input type="radio" name="answer" value="questionSeven"> The kind of song that pays. <br>
-                <input type="radio" name="answer" value="questionSeven"> The kind of song that ignites the airwaves.
-                <br>
-            </form>
-        </div>
+        <div class="questionText"></div>
+        <div class="answerText"></div>
 
         <!-- Footer with Timer -->
         <div class="footer">
             <div class="container">
-                <h3>Time Left: <span id="timerCountText">60</span></h3>
+                <span id="timerCountText"></span>
             </div>
         </div>
 
