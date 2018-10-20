@@ -102,7 +102,7 @@ function stop() {
 var timer = {
     start: function () {
         alert("Starting Timer");
-        timerNumber = 5;
+        timerNumber = 15;
         runTimer();
         decrement();
     }
