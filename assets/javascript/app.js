@@ -45,7 +45,15 @@ var questions = [
     }
 
 
-]
+];
+
+console.log(questions[1].answer);
+
+var correctAnswers = [questions[0].answer, questions[1].answer, questions[2].answer, questions[3].answer, questions[4].answer, questions[5].answer, questions[6].answer];
+
+
+
+console.log(correctAnswers);
 
 
 
@@ -53,9 +61,11 @@ var startButton;
 var correctAnswers = 0;
 var wrongAnswers = 0;
 var userGuess = "";
-var timerNumber = 5;
+var timerNumber = 15;
 var intervalId;
 var running = false;
+var index;
+var pick;
 
 
 
@@ -82,57 +92,96 @@ function decrement() {
 }
 
 //Creates text that notifies user that time is up
-function stop(){
+function stop() {
     $("#timerCountText").text("Time's Up!");
     clearInterval(intervalId);
-    running = false;    
+    running = false;
 }
 
 
 var timer = {
     start: function () {
         alert("Starting Timer");
-        timerNumber=5;
+        timerNumber = 5;
         runTimer();
-        decrement();    
+        decrement();
     }
 };
 
-//This starts game on button click
-$("#start").on("click", timer.start);
+// //This starts game on button click
+// $("#start").on("click", timer.start);
+$("#start").on("click", startGame);
+
+
+//Displays Questions
+function displayQuestions() {
 
 
 
+    for (i = 0; i < questions.length; i++) {
+        var questionHeader = $("<h3>").text(questions[i].question);
+        $(".questionText").append(questionHeader)
+        console.log(questions[i].question);
 
-function displayQuestions(){
+        questions[i].choice.forEach(function (options) {
+            var answerHeader = $("<div>").text(options);
+            $(".questionText").append(answerHeader);
 
-for (i=0; i < questions.length; i++){
-  var questionHeader = $("<h3>").text(questions[i].question);
- $(".questionText").append(questionHeader)
-console.log(questions[i].question);
+            console.log(answerHeader);
+        })
 
-questions[i].choice.forEach(function(options){
-    var answerHeader = $("<p>").text(options);
-    $(".questionText").append(answerHeader);
+
+    }
+
+    for (i = 0; i < correctAnswers.length; i++) {
+        $(questions.answer).addClass('test');
+
+    }
+    console.log(correctAnswers);
+} console.log(correctAnswers);
+
+
+
+for (i = 0; i < correctAnswers.length; i++) {
+    // var userChoice = $("<div>");
+    correctAnswers[i].addClass("answerChoice");
+    // userChoice.html(questions[i].choice);
+    // userChoice.attr("data-guessvalue", i);
+    // $("#answerText").append(userChoice);
+    // console.log(userChoice)
+}
+
+
+$("div").on("click", function () {
+
+    userGuess = parseInt($(this).attr("data-guessvalue"));
+
+    if (userGuess === correctAnswers) {
+        correctAnswers++;
+        userGuess = "";
+        $(this).css("background-color", "green");
+        console.log(this);
+
+    }
+
 
 })
-}
-
-
-}
-
-displayQuestions();
 
 
 
 
-
-//Displays questions on 
+//Displays questions and start timer
 function startGame() {
-
+    timer.start();
     displayQuestions();
 
 
 };
 
+// Update Score
+$("#correctText").text(correctAnswers);
 
+
+function winnerColor() {
+    $("")
+}
