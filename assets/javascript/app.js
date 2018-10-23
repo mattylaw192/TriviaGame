@@ -119,27 +119,25 @@ function displayQuestions() {
 
 
     for (i = 0; i < questions.length; i++) {
+       
+        var question = questions[i];
         var questionHeader = $("<h3>").text(questions[i].question);
-        $(".questionText").append(questionHeader)
-        console.log(questions[i].question);
+        
+        
+        $("#questionText" + i).append(questionHeader);
 
-        questions[i].choice.forEach(function (options) {
-            var answerHeader = $("<div>").text(options);
-            $(".questionText").append(answerHeader);
+        for (j=0; j < question.choice.length; j++){
+            var answerElement =  $("<p>").text(question.choice[j]);
+            console.log(question.choice[j]);
+            $("#answerText"+ i).append(answerElement);
+        }
 
-            console.log(answerHeader);
-        })
-
-
-    }
-
-    for (i = 0; i < correctAnswers.length; i++) {
-        $(questions.answer).addClass('test');
 
     }
-    console.log(correctAnswers);
-} console.log(correctAnswers);
 
+    // 
+} 
+displayQuestions();
 
 
 for (i = 0; i < correctAnswers.length; i++) {
